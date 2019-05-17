@@ -125,6 +125,13 @@ class MrpcProcessor(DataProcessor):
                 InputExample(guid=guid, text_a=text_a, text_b=text_b, label=label))
         return examples
 
+
+class dummy_model_class(BertForSequenceClassification):
+    def __init__(self, config, num_labels):
+        super(dummy_model_class, self).__init__(config, num_labels)
+        self.classifier = None
+        self.apply(self.init_bert_weights)
+
 def main():
     parser = argparse.ArgumentParser()
 
@@ -165,17 +172,16 @@ def main():
 
     num_labels = num_labels_task[task_name]
     cache_dir = args.cache_dir if args.cache_dir else os.path.join(str(PYTORCH_PRETRAINED_BERT_CACHE), 'distributed_{}'.format(args.local_rank))
-    model = BertForSequenceClassification.from_pretrained(args.bert_model_path,
+    extracted_bert = dummy_model_class.from_pretrained(args.bert_model_path,
               cache_dir=cache_dir,
               num_labels = num_labels)
 
-    extracted_bert = model.bert
 
     model_to_save = extracted_bert.module if hasattr(extracted_bert, 'module') else extracted_bert  # Only save the model it-self
     output_model_file = args.bert_model_path+"/bertextracted.bin"
     torch.save(model_to_save.state_dict(), output_model_file)
 
-    print("stop")
+    print(output_model_file)
 
 if __name__ == "__main__":
     main()
