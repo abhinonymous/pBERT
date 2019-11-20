@@ -1,4 +1,4 @@
-## Specific details pertaining to pBert training ##
+## Specific details pertaining to pBert finetuning ##
 
 Sample [script](https://github.com/abhinonymous/pytorch-pretrained-BERT/blob/master/examples/train_downstream_task.sh) to train using pBert.
 
