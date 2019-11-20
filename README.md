@@ -1,4 +1,9 @@
 ## Specific details pertaining to pBert ##
+[Large-Scale, Diverse, Paraphrastic Bitexts via Sampling and Clustering](https://www.aclweb.org/anthology/K19-1005/)
+
+J. Edward Hu, Abhinav Singh, Nils Holzenberger, Matt Post, Benjamin Van Durme
+
+<br>
 
 Sample [script](https://github.com/abhinonymous/pytorch-pretrained-BERT/blob/master/examples/train_downstream_task.sh) to train using pBert.
 
