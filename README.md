@@ -1,3 +1,10 @@
+## Specific details Pertaining to pBert training ##
+
+Sample [script](https://github.com/abhinonymous/pytorch-pretrained-BERT/blob/master/examples/train_downstream_task.sh) to train using pBert.
+
+This repo is a fork of [huggingface repo](https://github.com/huggingface/transformers) . Installation instructions below.
+
+
 # PyTorch Pretrained BERT: The Big & Extending Repository of pretrained Transformers
 
 [![CircleCI](https://circleci.com/gh/huggingface/pytorch-pretrained-BERT.svg?style=svg)](https://circleci.com/gh/huggingface/pytorch-pretrained-BERT)
