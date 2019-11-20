@@ -2,6 +2,8 @@
 
 Sample [script](https://github.com/abhinonymous/pytorch-pretrained-BERT/blob/master/examples/train_downstream_task.sh) to train using pBert.
 
+pBert model available on [Google Drive](https://drive.google.com/drive/folders/1Z0gE63moXXu1lACGK3jnzAa11bZyIHI3?usp=sharing)
+
 This repo is a fork of [huggingface repo](https://github.com/huggingface/transformers) . Installation instructions below.
 
 
